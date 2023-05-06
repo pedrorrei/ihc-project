@@ -6,26 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="icon" href="image-removebg-preview.png">
+    <link rel="icon" href="imagens/logo/logorosa.png">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="cards.css">
     <link rel="stylesheet" href="games.css">
     <title>ZeroCostGaming - Home</title>
 </head>
 <style>
-  .margem {
-      margin-top: 50px;
+  .margem30 {
+      margin-top: 30px;
   }
 </style>
-<body style="background-color: rgb(21, 21, 21);">
+<style>
+  .margem20 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+</style>
+<style>
+  .margemleft {
+      margin-left: 20px;
+  }
+</style>
+<style>
+  .topo {
+      align-items: top;
+  }
+</style>
+<body style=" background-image: linear-gradient(#16082e, rgb(0, 0, 0));">
 
 
  <!-- NAVBAR -->
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-          <img src="image-removebg-preview.png" alt="" width="50" height="40">
+      <a class="navbar-brand" href="index.html">
+          <img src="imagens/logo/logorosa.png" alt="" width="40" height="40">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,12 +49,12 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active margemleft" aria-current="page" href="index.html" margin-left>Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link margemleft" href="#">Wishlist</a>
           </li>
-          <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
             </a>
@@ -48,7 +64,7 @@
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
-          </li>
+          </li> -->
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -69,20 +85,21 @@
 
  <!-- CARROUSSEL -->
 
-  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
     <div class="carousel-inner rounded-3">
       <div class="carousel-item active">
         <div class="d-flex">
-          <img src="cs2.jpg" class="d-block w-100" alt="..." height="200px" width="150px">
-          <img src="rocketleague.jpg" class="d-block w-100" alt="..." height="200px" width="150px">
-          <img src="fifa23.jpeg" class="d-block w-100" alt="..." height="200px" width="150px">
+          <img src="imagens/carroussel/csgo.png" class="d-block w-100" alt="...">
         </div>
       </div>
       <div class="carousel-item">
         <div class="d-flex">
-          <img src="https://via.placeholder.com/200x150" class="d-block w-100" alt="...">
-          <img src="https://via.placeholder.com/200x150" class="d-block w-100" alt="...">
-          <img src="https://via.placeholder.com/200x150" class="d-block w-100" alt="...">
+          <img src="imagens/carroussel/rocketleague.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex">
+          <img src="imagens/carroussel/fifa23.jpeg" class="d-block w-100" alt="...">
         </div>
       </div>
     </div>
@@ -97,9 +114,25 @@
   </div>
 </div>
 
- <!-- LISTA DE PLATAFORMAS -->
+ <!-- FREE  SALE  NEW -->
+ <div class="video-card-container2 margem30">
+  <div class="video-card2">
+    <img src="imagens/free sale new/free.png" class="video-card-image2" alt="">
+    <img src="imagens/free sale new/free 2.png" mute loop class="card-video2"></img>
+  </div>
+  <div class="video-card2">
+    <img src="imagens/free sale new/sale.png" class="video-card-image2" alt="">
+    <img src="imagens/free sale new/sale 2.png" mute loop class="card-video2"></img>
+  </div>
+  <div class="video-card2">
+    <img src="imagens/free sale new/new.png" class="video-card-image2" alt="">
+    <img src="imagens/free sale new/new 2.png" mute loop class="card-video2"></img>
+  </div>
+</div> 
 
-<div class="video-card-container margem">
+ <!-- LISTA DE PLATAFORMAS -->
+ <h1 class="title margem20">Platforms</h1>
+<div class="video-card-container">  
   <div class="video-card">
     <img src="imagens/plataforma/steam.png" class="video-card-image" alt="">
     <img src="imagens/plataforma/steam 2.png" mute loop class="card-video"></img>
@@ -118,133 +151,134 @@
   </div>
   <div class="video-card">
     <img src="imagens/plataforma/xbox.png" class="video-card-image" alt="">
-    <img src="imagens/plataforma/xbox 2.jpg" mute loop class="card-video"></img>
+    <img src="imagens/plataforma/xbox 2.jpg" mute loop class="card-video"></img>  
   </div>
 </div> 
 
- <!-- FREE  SALE  NEW -->
+ <!-- RECOMENDADOS -->
 
- <div class="video-card-container2 margem">
-  <div class="video-card2">
-    <img src="imagens/free sale new/free.png" class="video-card-image2" alt="">
-    <img src="imagens/free sale new/free 2.png" mute loop class="card-video2"></img>
-  </div>
-  <div class="video-card2">
-    <img src="imagens/free sale new/sale.png" class="video-card-image2" alt="">
-    <img src="imagens/free sale new/sale 2.png" mute loop class="card-video2"></img>
-  </div>
-  <div class="video-card2">
-    <img src="imagens/free sale new/new.png" class="video-card-image2" alt="">
-    <img src="imagens/free sale new/new 2.png" mute loop class="card-video2"></img>
-  </div>
-</div> 
-
- <!-- LISTA DE JOGOS -->
-
-<h1 class="title">Destaques</h1>
+<h1 class="title margem30">Recommended for You</h1>
     <div class="movies-list">
         <button class="pre-btn"><img src="imagens/random/pre.png" alt=""></button>
         <button class="nxt-btn"><img src="imagens/random/nxt.png" alt=""></button>
         <div class="card-container">
+             <div class="card">
+              <img src="imagens/jogos/gta.png" class="card-img" alt="">
+              <div class="card-body">
+                  <h2 class="name">Grand Theft Auto V</h2>
+              </div>
+            </div>
             <div class="card">
-                <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
+              <img src="imagens/jogos/csgo.png" class="card-img" alt="">
+              <div class="card-body">
+                  <h2 class="name">Counter Strike: Global Offensive</h2>
+              </div>
+            </div>  
+            <div class="card">
+              <img src="imagens/jogos/nfs.jpg" class="card-img" alt="">
+              <div class="card-body">
+                  <h2 class="name">Need For Speed: Unbound</h2>
+              </div>
+            </div>
+            <div class="card">
+              <img src="imagens/jogos/nba.png" class="card-img" alt="">
+              <div class="card-body">
+                  <h2 class="name">NBA 2K22</h2>
+              </div>
+            </div> 
+            <div class="card">
+              <img src="imagens/jogos/red dead redemption.jpg" class="card-img" alt="">
+              <div class="card-body">
+                  <h2 class="name">Red Dead Redemption II</h2>
+              </div>
+            </div> 
+            <div class="card">
+                <img src="imagens/jogos/f1 22.png" class="card-img" alt="">
                 <div class="card-body">
-                    <h2 class="name">FIFA 23</h2>
+                    <h2 class="name">F1 22</h2>
                 </div>
             </div>
             <div class="card">
-              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
+              <img src="imagens/jogos/rocket league.jpg" class="card-img" alt="">
               <div class="card-body">
-                  <h2 class="name">FIFA 23</h2>
+                  <h2 class="name">Rocket League</h2>
               </div>
             </div>
             <div class="card">
+              <img src="imagens/jogos/minecraft.png" class="card-img" alt="">
+              <div class="card-body">
+                  <h2 class="name">Minecraft</h2>
+              </div>
+            </div> 
+            <div class="card">
+              <img src="imagens/jogos/cod.png" class="card-img" alt="">
+              <div class="card-body">
+                  <h2 class="name">Call of Duty: Cold War</h2>
+              </div>
+            </div> 
+            <div class="card">
+              <img src="imagens/jogos/forza.png" class="card-img" alt="">
+              <div class="card-body">
+                  <h2 class="name">Forza Horizon 5</h2>
+              </div>
+            </div>
+            <a href="fifa23.html"><div class="card">
               <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
               <div class="card-body">
                   <h2 class="name">FIFA 23</h2>
+              </div>
+            </div></a>
+            <div class="card">
+              <img src="imagens/jogos/spider man.jpg" class="card-img" alt="">
+              <div class="card-body">
+                  <h2 class="name">Spider-Man: Miles Morales</h2>
+              </div>
+            </div> 
+            <div class="card">
+              <img src="imagens/jogos/revil.jpg" class="card-img" alt="">
+              <div class="card-body">
+                  <h2 class="name">Resident Evil VII</h2>
+              </div>
+            </div> 
+            <div class="card">
+              <img src="imagens/jogos/overwatch.jpg" class="card-img" alt="">
+              <div class="card-body">
+                  <h2 class="name">Overwatch 2</h2>
+              </div>
+            </div> 
+            <div class="card">
+              <img src="imagens/jogos/mortal kombat 11.png" class="card-img" alt="">
+              <div class="card-body">
+                  <h2 class="name">Mortal Kombat 11</h2>
+              </div>
+            </div> 
+            <div class="card">
+              <img src="imagens/jogos/nfl.jpg" class="card-img" alt="">
+              <div class="card-body">
+                  <h2 class="name">Madden NFL 23</h2>
               </div>
             </div>
             <div class="card">
-              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
+              <img src="imagens/jogos/rainbow.jpg" class="card-img" alt="">
               <div class="card-body">
-                  <h2 class="name">FIFA 23</h2>
-              </div>
-            </div> 
-            <div class="card">
-              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
-              <div class="card-body">
-                  <h2 class="name">FIFA 23</h2>
-              </div>
-            </div> 
-            <div class="card">
-              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
-              <div class="card-body">
-                  <h2 class="name">FIFA 23</h2>
+                  <h2 class="name">Rainbow Six Siege</h2>
               </div>
             </div>
             <div class="card">
-              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
+              <img src="imagens/jogos/ark.jpg" class="card-img" alt="">
               <div class="card-body">
-                  <h2 class="name">FIFA 23</h2>
+                  <h2 class="name">ARK: Survival Evolved</h2>
               </div>
             </div>
             <div class="card">
-              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
+              <img src="imagens/jogos/halo.png" class="card-img" alt="">
               <div class="card-body">
-                  <h2 class="name">FIFA 23</h2>
-              </div>
-            </div> 
-            <div class="card">
-              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
-              <div class="card-body">
-                  <h2 class="name">FIFA 23</h2>
-              </div>
-            </div> 
-            <div class="card">
-              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
-              <div class="card-body">
-                  <h2 class="name">FIFA 23</h2>
-              </div>
-            </div> 
-            <div class="card">
-              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
-              <div class="card-body">
-                  <h2 class="name">FIFA 23</h2>
-              </div>
-            </div> 
-            <div class="card">
-              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
-              <div class="card-body">
-                  <h2 class="name">FIFA 23</h2>
-              </div>
-            </div> 
-            <div class="card">
-              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
-              <div class="card-body">
-                  <h2 class="name">FIFA 23</h2>
-              </div>
-            </div> 
-            <div class="card">
-              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
-              <div class="card-body">
-                  <h2 class="name">FIFA 23</h2>
-              </div>
-            </div> 
-            <div class="card">
-              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
-              <div class="card-body">
-                  <h2 class="name">FIFA 23</h2>
-              </div>
-            </div> 
-            <div class="card">
-              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
-              <div class="card-body">
-                  <h2 class="name">FIFA 23</h2>
+                  <h2 class="name">Halo Infinite</h2>
               </div>
             </div>
         </div>
    </div>
-
+   
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" >
 </script>

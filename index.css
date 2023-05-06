@@ -1,21 +1,21 @@
 .navbar {
-  color: #02101e !important; 
+  background-color: #1d0a3da1 !important; 
   position: relative;
   z-index: 1;
 }
 .navbar a {
-  color: #a2008f !important;
+  color: #ffffff !important;
 }
 .navbar a:hover {
-  color:yellow !important;
+  color:#FF66C4 !important;
 }
 .navbar .active {
-  background-color:rgb(16, 206, 143) !important;
+  background-color:#140728 !important;
   color: #fff;
 }
 
 .dropdown-menu {
-  background-color: #02101e !important;   
+  background-color: #250d4e !important;   
   position: absolute;
   z-index: 2;
 }
@@ -26,7 +26,7 @@
 }
 
 .carousel-inner img {
-  max-height: 150px;
+  max-height: 300px;
   object-fit: cover;
 }
 
