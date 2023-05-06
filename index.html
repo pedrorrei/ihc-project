@@ -69,8 +69,14 @@
             </ul>
           </li> -->
         </ul>
-        <form class="d-flex">
-          <input class="typehead me-2" data-provide="typeahead"  type="text" placeholder="Search">
+        <!-- <form class="d-flex"> -->
+          <div class="search-container">
+            <input type="text" id="search" autocomplete="off">
+            <div class="search-suggestions"></div>
+            </div>
+          
+          
+          <!-- <input class="typehead me-2" data-provide="typeahead"  type="text" placeholder="Search"> -->
           <!-- <button class="btn btn-outline-success me-2" type="submit">Search</button> -->
           <button class="btn btn-outline-light me-2" type="submit">
             <i class="fa-solid fa-user"></i>
@@ -123,7 +129,7 @@
 </div>
 
  <!-- FREE  SALE  NEW -->
- <div class="video-card-container2 margem30">
+ <div class="video-card-container2 margem30" style="margin-top: 15px;">
   <div class="video-card2">
     <img src="imagens/free sale new/free.png" class="video-card-image2" alt="">
     <img src="imagens/free sale new/free 2.png" mute loop class="card-video2"></img>
