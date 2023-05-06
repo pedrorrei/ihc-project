@@ -1,11 +1,11 @@
-const basicAutocomplete = document.querySelector('#search-autocomplete');
-const data = ['One', 'Two', 'Three', 'Four', 'Five'];
-const dataFilter = (value) => {
-  return data.filter((item) => {
+const navbarAutocomplete = document.querySelector('#navbar-search-autocomplete');
+const navbarData = ['One', 'Two', 'Three', 'Four', 'Five'];
+const navbarDataFilter = (value) => {
+  return navbarData.filter((item) => {
     return item.toLowerCase().startsWith(value.toLowerCase());
   });
 };
 
-new mdb.Autocomplete(basicAutocomplete, {
-  filter: dataFilter
+new mdb.Autocomplete(navbarAutocomplete, {
+  filter: navbarDataFilter,
 });
