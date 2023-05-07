@@ -88,3 +88,10 @@
     text-transform: capitalize;
     margin-top: 120%;
 }
+
+.cardprice {
+    flex-direction: row;
+}
+.cardprice img {
+    width: 30%;
+}
