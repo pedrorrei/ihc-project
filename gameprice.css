@@ -10,7 +10,7 @@
 .card-container{
     position: relative;
     width: 92%;
-    padding-left: 10px;
+    padding-left: 15px;
     height: 220px;
     display: flex;
     margin: 0 auto;
@@ -25,7 +25,7 @@
 }
 
 .card{
-    position: relative;
+    padding-left: 0px;
     min-width: 150px;
     width: 300px;
     height: 200px;

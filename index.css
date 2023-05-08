@@ -3,7 +3,7 @@
 }
 
 .navbar {
-  background-color: #1d0a3da1 !important; 
+  background-color: #190934 !important; 
   position: relative;
   z-index: 1;
 }
@@ -237,4 +237,34 @@
   background-color: transparent;
   border-bottom:1px solid #FF66C4;
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+
+/* scrollbar */
+
+.c {
+	height: 200vh;
+	width: 960px;
+	margin: auto;
+	max-width: 95%;
+
+}
+
+
+::-webkit-scrollbar-track
+{
+	border: 8px solid #1f0b41;
+	background-color: #19093400;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #1f0b41;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #e149a7;
+	border-radius: 10px;
 }
