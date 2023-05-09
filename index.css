@@ -30,7 +30,7 @@
 }
 
 .carousel-inner img {
-  max-height: 300px;
+  max-height: 250px;
   object-fit: cover;
 }
 
