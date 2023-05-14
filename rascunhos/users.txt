@@ -1,0 +1,5 @@
+octavio:$2y$10$GZMf5lwsKYNB/NpB5HqWNuWNpOvP0fLHw9t.jULuWiwIK4UlKV5pq
+octavio123:$2y$10$koIDpJizXVSZt9GAUTvIgu5/2Dp7NdavgWWUbHzJW4m2MGpuNPo06
+rodrigo:$2y$10$cDrMf70k5g0lCIVK5Ch0Tepnc0UGTm1.TrsWRpYZAnb5mJ6KFYiMS
+martinez:$2y$10$diOSjJB5mCuNxsoIEVO4J.zR2Q0INKI8nHzG3ytMC9NOv6JWGdmIi
+rodrigo123:$2y$10$0c8Wablm4SeqlTuCbbEpVeYSH/uNx8a0QcpfettFJ4LDiACVju5ne
