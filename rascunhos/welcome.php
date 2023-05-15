@@ -37,76 +37,65 @@
 
 <body class="gradient">
 
-
- <!-- NAVBAR -->
-
-  <nav class="navbar navbar-expand-lg ">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid" style="margin-left: 5%;margin-right: 5%;">
-      <a class="navbar-brand" href="index.html">
-          <img src="imagens/logo/logorosa.png" alt="" width="me-auto" height="40">
-      </a>
-      <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="toggler-icon top-bar"></span>
-        <span class="toggler-icon middle-bar"></span>
-        <span class="toggler-icon bottom-bar"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active margemleft" aria-current="page" href="index.html" margin-left>Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link margemleft" href="wishlist.html">Wishlist</a>
-          </li>
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li> -->
-        </ul>
-        <!-- <form class="d-flex"> 
-          <div class="search-container" style="margin-right: 20px">
-            <input type="text" id="search" placeholder="Type to Search..." autocomplete="off">
-            <div class="search-suggestions"></div>
-            </div>-->
-          
-          
-          <!-- <input class="typehead me-2" data-provide="typeahead"  type="text" placeholder="Search"> -->
-          <!-- <button class="btn btn-outline-success me-2" type="submit">Search</button>
-          <button class="btn btn-outline-light me-2" type="submit">
-            <i class="fa-solid fa-user"></i>
-          </button>
-          <button class="btn btn-outline-light" type="submit" style="margin-left: 10px">
-            <i class="far fa-heart"></i>
-          </button> -->
-          
-          <div class="search-box" style="margin-right: 20px;margin-left: 20px;">
+        <a class="navbar-brand" href="index.html">
+            <img src="imagens/logo/logorosa.png" alt="" width="me-auto" height="40">
+        </a>
+        <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active margemleft" aria-current="page" href="index.html" margin-left>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link margemleft" href="wishlist.html">Wishlist</a>
+                </li>
+                </ul>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li> -->
+            <div class="search-box" style="margin-right: 20px;margin-left: 20px;">
             <input type="text"  id="search" class="input-search" placeholder="Type to Search..." autocomplete="off">
             <div class="search-suggestions"></div>
-          </div>
+            </div>
+            </ul>
 
-          <!--  <div class="search-box" style="margin-right: 20px">
-            <button class="btn-search"><i class="fas fa-search"></i></button>
-            <input type="text" id="search" class="input-search" placeholder="Type to Search..." autocomplete="off">
-            <div class="search-suggestions"></div>
-          </div>
-        
-        </form> -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link margemleft" href="#">Login</a>
-          </li>
-        </ul>
-      </div>
+            <?php
+            session_start(); // Start the session
+
+            // Check if the user is logged in
+            if (isset($_SESSION['username'])) {
+                echo '<form action="logout.php" method="POST">';
+                echo '<input type="submit" value="Logout" class="btn btn-outline-light margemleft">';
+                echo '</form>';
+            } else {
+                echo '<ul class="navbar-nav">';
+                echo '<li class="nav-item">';
+                echo '<a class="nav-link margemleft" href="index.html">Login</a>';
+                echo '</li>';
+                echo '</ul>';
+            }
+            ?>
+
+        </div>
     </div>
-  </nav>
+</nav>
+
   
 
 
