@@ -37,52 +37,76 @@
 
 <body class="gradient">
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid" style="margin-left: 5%;margin-right: 5%;">
-        <a class="navbar-brand" href="index.html">
-            <img src="imagens/logo/logorosa.png" alt="" width="me-auto" height="40">
-        </a>
-        <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="toggler-icon top-bar"></span>
-            <span class="toggler-icon middle-bar"></span>
-            <span class="toggler-icon bottom-bar"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active margemleft" aria-current="page" href="index.html" margin-left>Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link margemleft" href="wishlist.html">Wishlist</a>
-                </li>
-                </ul>
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li> -->
-            <div class="search-box" style="margin-right: 20px;margin-left: 20px;">
+ <!-- NAVBAR -->
+
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid" style="margin-left: 5%;margin-right: 5%;">
+      <a class="navbar-brand" href="index.html">
+          <img src="imagens/logo/logorosa.png" alt="" width="me-auto" height="40">
+      </a>
+      <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-icon top-bar"></span>
+        <span class="toggler-icon middle-bar"></span>
+        <span class="toggler-icon bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active margemleft" aria-current="page" href="index.html" margin-left>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link margemleft" href="wishlist.html">Wishlist</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li> -->
+        </ul>
+        <!-- <form class="d-flex"> 
+          <div class="search-container" style="margin-right: 20px">
+            <input type="text" id="search" placeholder="Type to Search..." autocomplete="off">
+            <div class="search-suggestions"></div>
+            </div>-->
+          
+          
+          <!-- <input class="typehead me-2" data-provide="typeahead"  type="text" placeholder="Search"> -->
+          <!-- <button class="btn btn-outline-success me-2" type="submit">Search</button>
+          <button class="btn btn-outline-light me-2" type="submit">
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <button class="btn btn-outline-light" type="submit" style="margin-left: 10px">
+            <i class="far fa-heart"></i>
+          </button> -->
+          
+          <div class="search-box" style="margin-right: 20px;margin-left: 20px;">
             <input type="text"  id="search" class="input-search" placeholder="Type to Search..." autocomplete="off">
             <div class="search-suggestions"></div>
-            </div>
-            </ul>
+          </div>
 
-            <?php
-          include 'login_info.php';
-        ?>
-
-        </div>
+          <!--  <div class="search-box" style="margin-right: 20px">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input type="text" id="search" class="input-search" placeholder="Type to Search..." autocomplete="off">
+            <div class="search-suggestions"></div>
+          </div>
+        
+        </form> -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link margemleft" href="#">Login</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
-
+  </nav>
   
 
 
@@ -106,7 +130,7 @@
           <img src="imagens/carroussel/rocketleague.jpg" class="d-block  w-100" alt="...">
         </div></a>
       </div>
-      <div class="carousel-item"><a href="fifa23.php">
+      <div class="carousel-item"><a href="fifa23.html">
         <div class="d-flex">
           <img src="imagens/carroussel/fifa23.jpeg" class="d-block w-100" alt="...">
         </div></a>
@@ -266,57 +290,13 @@
    
    <!-- WISHLIST -->
 
-<?php
-session_start(); // Start the session
-$username = $_SESSION['username']; // get the username of the logged in user
-$wishlist = getWishlist($username); // get the wishlist for the user
-
-function getWishlist($username) {
-  $filePath = 'wishlist.txt';
-
-  // Read the file and store the lines in an array
-  $lines = file($filePath);
-  $wishlist = [];
-
-  // Loop through the lines
-  foreach ($lines as $line) {
-      // Explode the line to get the username and game
-      $parts = explode(':', trim($line));
-      $storedUsername = $parts[0];
-      $game = $parts[1];
-
-      // If the username matches, add the game to the wishlist
-      if ($storedUsername === $username) {
-          $wishlist[] = $game;
-      }
-  }
-
-  return $wishlist;
-}
-
-?>
-
 <h1 class="title margem30">In Your Wishlist</h1>
 <div class="movies-list">
     <button class="pre-btn"><img src="imagens/random/pre.png" alt=""></button>
     <button class="nxt-btn"><img src="imagens/random/nxt.png" alt=""></button>
     <div class="card-container">
-    <?php foreach ($wishlist as $game): 
-        // Check if the .jpg image exists
-        $imgPath = "imagens/jogos/{$game}.jpg";
-        if (!file_exists($imgPath)) {
-            // If the .jpg image doesn't exist, use the .png image
-            $imgPath = "imagens/jogos/{$game}.png";
-        }
-        ?>
-    <div class="card">
-        <img src="<?php echo $imgPath; ?>" class="card-img" alt="">
-        <div class="card-body">
-            <h2 class="name"><?php echo $game; ?></h2>
-        </div>
-    </div> 
-    <?php endforeach; ?>
-</div>
+      <h4 style="color: #FF66C4;"> Wishlist is empty. Add games to see it</h4>
+    </div>
 </div>
 
    <!-- OTHER GAMES -->
@@ -386,7 +366,7 @@ function getWishlist($username) {
                  <h2 class="name">Forza Horizon 5</h2>
              </div>
            </div>
-           <a href="fifa23.php"><div class="card">
+           <a href="fifa23.html"><div class="card">
              <img src="imagens/jogos/fifa23.jpg" class="card-img" alt="">
              <div class="card-body">
                  <h2 class="name">FIFA 23</h2>

@@ -43,7 +43,7 @@ searchInput.addEventListener("input", function() {
 
   const suggestionList = matchingWords.map(function(word) {
     const link = word.name.toLowerCase().replace(/[\s:]/g, "");
-    return `<a style="text-decoration: none;" href="${link}.html"><li><img src="${word.image}" alt="${word.name}">${word.name}</li></a>`;
+    return `<a style="text-decoration: none;" href="${link}.php"><li><img src="${word.image}" alt="${word.name}">${word.name}</li></a>`;
   });
 
   if (input && matchingWords.length > 0) {
