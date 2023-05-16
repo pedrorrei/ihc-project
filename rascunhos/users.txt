@@ -1,8 +1,0 @@
-martinez:$2y$10$diOSjJB5mCuNxsoIEVO4J.zR2Q0INKI8nHzG3ytMC9NOv6JWGdmIi
-acliclas:$2y$10$RYbBUFMkCgpi9zdzRrLhFuQsRWg8j4/3eShut7SMC98Pyhx3qKro2
-acliclas2003:$2y$10$70uJNHF75LOTbKwVwZQvIuVGhtw2oTS.2AY1lPblDkGv0prtEEUUS
-olaolaola:$2y$10$MeOM6xF701rW2JFoZ5wM5.ItJ/66nFNjTBaesXkf9RHSjkvbdDcki
-12345:$2y$10$hPRonX5VeZRweiVzgIaeI.gqjbFYB1nBug6dOTePhHNdFC/.1KaJ6
-pedro:$2y$10$0.zPBXO7TQRPQ.W2D5B36.42NiuiR5pGpsJznIXOS6BH4pWBOJSkW
-eduardo:$2y$10$vsrFUTc2x8KhmyhlJpxbPuQlSdOMpelU4XGowc2TWv84aCuw7h8L2
-cruz:$2y$10$1pHhtb2TKp6kVrkmqc84denM.kakK7wvQaW2kP50D0vuUeVnxWUA2
