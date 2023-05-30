@@ -71,38 +71,43 @@
  <!-- INTRO -->
 
  <div class="container" style="margin-top: 20px">
-    <img src="imagens/plataforma/steamname.png" class="d-block w-100" alt="..." style="max-height: 200px;object-fit: contain;">
+    <img src="imagens/plataforma/steamname.png" class="d-block w-100" alt="..." style="max-height: 80px;object-fit: contain;">
   </div>
 
  <!-- FREE  SALE  NEW -->
  <h1 class="title margem20">Filters</h1>
- <div class="video-card-container2">
-  <div class="video-card2" onclick="filterGames('free')">
+ <div class="video-card-container2" style="display: flex; justify-content: center;">
+  <div class="video-card2" onclick="filterGames('free')" style="margin-right: 10px;">
     <img src="imagens/free sale new/free.png" class="video-card-image2" alt="">
     <img src="imagens/free sale new/free 2.png" mute loop class="card-video2"></img>
   </div>
-  <div class="video-card2" onclick="filterGames('sale')">
+  <div class="video-card2" onclick="filterGames('sale')" style="margin-right: 10px;">
     <img src="imagens/free sale new/sale.png" class="video-card-image2" alt="">
     <img src="imagens/free sale new/sale 2.png" mute loop class="card-video2"></img>
   </div>
-  <div class="video-card2" onclick="filterGames('filter')">
-    <img src="imagens/free sale new/new.png" class="video-card-image2" alt="">
-    <img src="imagens/free sale new/new 2.png" mute loop class="card-video2"></img>
+  <div class="video-card2" onclick="filterGames('filter')" style="margin-right: 10px;">
+    <img src="imagens/plataforma/steamprice1.jpeg" class="video-card-image2" alt="">
+    <img src="imagens/plataforma/steamprice2.jpeg" mute loop class="card-video2"></img>
   </div>
-</div> 
 
-<div class="filter-price" style="display: flex; flex-direction: column; align-items: center;">
-    <h1 class="title margem20">Filter by Price</h1>
+  <div class="filter-price" style="display: flex; flex-direction: column; align-items: center; margin-left: 10px; margin-right: 10px;">
+    <!-- <h1 class="title margem20">Filter by Price</h1> -->
     <div style="display: flex; width: 35%; justify-content: center; align-items: center;">
-        <label for="min-price" style="color: white; margin-right: 0.5rem;">Minimum Price:</label>
-        <input type="number" id="min-price" value="0" min="0" step="0.01">
+      <label for="min-price" style="color: white; margin-right: 0.5rem;">Minimum Price:</label>
+      <input type="number" id="min-price" value="0" min="0" step="1">
     </div>
     <div style="display: flex; width: 35%; justify-content: center; margin-top: 1rem;">
-        <label for="max-price" style="color: white; margin-right: 0.5rem;">Maximum Price:</label>
-        <input type="number" id="max-price" value="100" min="0" step="0.01">
+      <label for="max-price" style="color: white; margin-right: 0.5rem;">Maximum Price:</label>
+      <input type="number" id="max-price" value="70" min="0" step="1">
     </div>
-    <button style="margin-top: 1rem" class="btn btn-outline-success" onclick="filterGames('price')">Apply</button>
+    <div style="display: flex; justify-content: center; margin-top: 1rem;">
+      <button style="margin-right: 10px;" class="btn btn-outline-danger" onclick="filterGames('filter')">Clear</button>
+      <button class="btn btn-outline-success" onclick="filterGames('price')">Apply</button>
+    </div>
+  </div>
 </div>
+
+
 
 
 

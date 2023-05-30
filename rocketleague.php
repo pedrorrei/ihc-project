@@ -165,34 +165,51 @@
   </div>
 </nav>
 
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" >
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="games.js"></script>
 <script src="wishlist.js"></script>
 <script>
-function addToWishlist(username, game) {
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Check wishlist on page load
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "wishlist.php", true);
+    xhr.open("POST", "check_wishlist.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    var button = document.getElementById("wishlist-button-csgo");
     
     xhr.onreadystatechange = function() {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-          try {
+            var button = document.getElementById("wishlist-button-rocketleague");
             var response = JSON.parse(this.responseText);
-            // Handle the JSON response
-        } catch (error) {
-            console.error('Error parsing JSON:', error);
-        }
-            var button = document.getElementById("wishlist-button-csgo");
-            console.log(response);
-            if (response.action === "add") {
+            if (response.message === "Game is in the wishlist") {
                 button.innerHTML = '<i class="far fa-trash"></i> Remove from Wishlist';
                 button.className = 'btn btn-outline-danger me-2';
+                button.onclick = function() { removeFromWishlist('<?php echo $_SESSION['username']; ?>', 'rocketleague'); };
             } else {
                 button.innerHTML = '<i class="far fa-heart"></i> Add to Wishlist';
-                button.onclick = function() { addToWishlist(username, game); };
+                button.className = 'btn btn-outline-success me-2';
+                button.onclick = function() { addToWishlist('<?php echo $_SESSION['username']; ?>', 'rocketleague'); };
+            }
+        }
+    }
+    
+    xhr.send("username=" + encodeURIComponent('<?php echo $_SESSION['username']; ?>') + "&game=rocketleague");
+});
+
+function addToWishlist(username, game) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "add_to_wishlist.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    var button = document.getElementById("wishlist-button-rocketleague");
+    
+    xhr.onreadystatechange = function() {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            var response = JSON.parse(this.responseText);
+            if (response.status === 'success') {
+                alert("Game added to your wishlist!");
+                button.innerHTML = '<i class="far fa-trash"></i> Remove from Wishlist';
+                button.className = 'btn btn-outline-danger me-2';
+                button.onclick = function() { removeFromWishlist(username, game); };
+            } else if (response.status === 'error') {
+                alert(response.message);
             }
         }
     }
@@ -201,9 +218,27 @@ function addToWishlist(username, game) {
 }
 
 function removeFromWishlist(username, game) {
-    // Logic to remove game from wishlist
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "remove_from_wishlist.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    var button = document.getElementById("wishlist-button-rocketleague");
+    
+    xhr.onreadystatechange = function() {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            var response = JSON.parse(this.responseText);
+            if (response.status === 'success') {
+                alert("Game removed from your wishlist!");
+                button.innerHTML = '<i class="far fa-heart"></i> Add to Wishlist';
+                button.className = 'btn btn-outline-success me-2';
+                button.onclick = function() { addToWishlist(username, game); };
+            } else if (response.status === 'error') {
+                alert(response.message);
+            }
+        }
+    }
+    
+    xhr.send("username=" + encodeURIComponent(username) + "&game=" + encodeURIComponent(game));
 }
-
 </script>
 </body>
 </html>

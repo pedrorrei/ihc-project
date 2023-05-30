@@ -77,12 +77,12 @@ function validatePasswordStrength($password) {
         return false;
     }
 
-    // Check if the password contains consecutive numbers
-    for ($i = 0; $i < strlen($password) - 2; $i++) {
-        if (ctype_digit($password[$i]) && ctype_digit($password[$i + 1]) && ctype_digit($password[$i + 2])) {
-            return false;
-        }
-    }
+    // // Check if the password contains consecutive numbers
+    // for ($i = 0; $i < strlen($password) - 2; $i++) {
+    //     if (ctype_digit($password[$i]) && ctype_digit($password[$i + 1]) && ctype_digit($password[$i + 2])) {
+    //         return false;
+    //     }
+    // }
 
     return true;
 }

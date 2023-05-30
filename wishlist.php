@@ -135,8 +135,13 @@ function getWishlist($username) {
 
 ?>
 
-<h1 class="title margem30">In Your Wishlist</h1>
-<button id="clear-wishlist-btn" class="btn btn-danger" style="margin-left:250px;">Clear Wishlist</button>
+<div class="container" style="display: flex; align-items: center;">
+  <h1 class="title margem30">In Your Wishlist</h1>
+  <div style="flex-grow: 1; display: flex; justify-content: center;">
+    <button id="clear-wishlist-btn" class="btn btn-danger">Clear Wishlist</button>
+  </div>
+</div>
+
 
 <div class="movies-list" style="height:50vh;">
     <button class="pre-btn"><img src="imagens/random/pre.png" alt=""></button>

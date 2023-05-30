@@ -142,23 +142,23 @@
  <!-- LISTA DE PLATAFORMAS -->
  <h1 class="title margem20">Platforms</h1>
 <div class="video-card-container">  
-  <div class="video-card">
+<div class="video-card" style="height:100px" >
     <img src="imagens/plataforma/steam.png" class="video-card-image" alt="">
     <a href="steam.php"><img src="imagens/plataforma/steam 2.png" mute loop class="card-video"></img></a>
   </div>
-  <div class="video-card">
+  <div class="video-card" style="height:100px" >
     <img src="imagens/plataforma/psn.png" class="video-card-image" alt="">
     <img src="imagens/plataforma/psn 2.png" mute loop class="card-video"></img>
   </div>
-  <div class="video-card">
+  <div class="video-card" style="height:100px" >
     <img src="imagens/plataforma/origin.png" class="video-card-image" alt="">
     <img src="imagens/plataforma/origin 2.png" mute loop class="card-video"></img>
   </div>
-  <div class="video-card">
+  <div class="video-card" style="height:100px" >
     <img src="imagens/plataforma/epicgames.png" class="video-card-image" alt="">
     <img src="imagens/plataforma/epicgames 2.png" mute loop class="card-video"></img>
   </div>
-  <div class="video-card">
+  <div class="video-card" style="height:100px" >
     <img src="imagens/plataforma/xbox.png" class="video-card-image" alt="">
     <img src="imagens/plataforma/xbox 2.jpg" mute loop class="card-video"></img>  
   </div>
@@ -166,7 +166,7 @@
 
  <!-- RECOMENDADOS -->
 
-<h1 class="title margem30">Recommended for You</h1>
+<h1 class="title margem30" style="margin-top:0px">Recommended for You</h1>
     <div class="movies-list">
         <button class="pre-btn"><img src="imagens/random/pre.png" alt=""></button>
         <button class="nxt-btn"><img src="imagens/random/nxt.png" alt=""></button>
