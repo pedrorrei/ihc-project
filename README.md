@@ -4,6 +4,8 @@
 
 ## How to Run:
 
+(Recomenda-se usar Ubunto ou uma VM de Linux)
+
 Install php
 
 (Usa este website se for necessário ajuda 'https://tecadmin.net/how-to-install-php-on-ubuntu-22-04/' )
