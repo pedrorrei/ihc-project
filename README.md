@@ -2,7 +2,7 @@
 
 
 
-### How to Run:
+## How to Run:
 
 Install php
 
@@ -18,9 +18,11 @@ Run 'php -S 127.0.0.1:8000 -t @yourpath' no diretorio 'Projeto'
 
 Abrir 'http://127.0.0.1:8000/welcome.php'
 
+(Recomenda-se usar o navegador Mozilla FireFox para melhor estabilidade)
 
 
-### Sobre:
+
+## Sobre:
 
 ZeroCostGaming - Website optimizado para computador,
 com o intuito de ajudar Jogadores de todo o tipo de plataformas a verificarem onde os jogos se encontram mais baratos,
@@ -28,10 +30,10 @@ tanto em promoções, como de graça.
 
 
 
-### Desenvolvedores:
+## Desenvolvedores:
 
-Rodrigo Graça nº107634 - LEI
-
-Pedro Rei nº107463 - LEI
-
-João Oliveira nº102631 - LECI
+| NMec | Nome | Curso | Email | Percentagem |
+|--:|---|---|---|---|
+| 107634 | Rodrigo Graça | LEI | rodrigomgraca@ua.pt | 33.3% |
+| 107463 | Pedro Rei | LEI | pedrorrei@ua.pt| 33.3% |
+| 102631 | João Oliveira | LECI | ricardombrodriguez@ua.pt| 33.3% |
