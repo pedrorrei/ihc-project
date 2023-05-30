@@ -191,7 +191,7 @@ function addToWishlist(username, game) {
             var response = JSON.parse(this.responseText);
             if (response.status === 'success') {
                 alert("Game added to your wishlist!");
-                button.innerHTML = '<i class="far fa-trash"></i> Remove from Wishlist';
+                button.innerHTML = '<i class="fa-regular fa-trash-can "></i> Remove from Wishlist';
                 button.className = 'btn btn-outline-danger me-2';
                 button.onclick = function() { removeFromWishlist(username, game); };
             } else if (response.status === 'error') {
