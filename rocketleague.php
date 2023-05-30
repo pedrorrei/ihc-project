@@ -204,12 +204,12 @@ function addToWishlist(username, game) {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
             var response = JSON.parse(this.responseText);
             if (response.status === 'success') {
-                alert("Game added to your wishlist!");
+                // alert("Game added to your wishlist!");
                 button.innerHTML = '<i class="far fa-trash"></i> Remove from Wishlist';
                 button.className = 'btn btn-outline-danger me-2';
                 button.onclick = function() { removeFromWishlist(username, game); };
             } else if (response.status === 'error') {
-                alert(response.message);
+                // alert(response.message);
             }
         }
     }
@@ -227,12 +227,12 @@ function removeFromWishlist(username, game) {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
             var response = JSON.parse(this.responseText);
             if (response.status === 'success') {
-                alert("Game removed from your wishlist!");
+                // alert("Game removed from your wishlist!");
                 button.innerHTML = '<i class="far fa-heart"></i> Add to Wishlist';
                 button.className = 'btn btn-outline-success me-2';
                 button.onclick = function() { addToWishlist(username, game); };
             } else if (response.status === 'error') {
-                alert(response.message);
+                // alert(response.message);
             }
         }
     }
