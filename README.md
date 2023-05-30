@@ -36,4 +36,4 @@ tanto em promoções, como de graça.
 |--:|---|---|---|---|
 | 107634 | Rodrigo Graça | LEI | rodrigomgraca@ua.pt | 33.3% |
 | 107463 | Pedro Rei | LEI | pedrorrei@ua.pt| 33.3% |
-| 102631 | João Oliveira | LECI | ricardombrodriguez@ua.pt| 33.3% |
+| 102631 | João Oliveira | LECI | joaobalseiro@ua.pt | 33.3% |
