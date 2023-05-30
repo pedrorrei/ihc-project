@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="cards.css">
     <link rel="stylesheet" href="games.css">
     <link rel="stylesheet" href="gameprice.css">
-    <title>ZeroCostGaming - Call Of Duty</title>
+    <title>ZeroCostGaming - Rocket League</title>
 </head>
 <style>
   .margem30 {
@@ -98,7 +98,7 @@
  <!-- INTRO -->
 
 <div class="text" style="display: flex;justify-content: center;margin-top: 50px;margin-bottom: 50px;margin-left: 50px;margin-right: 50px">
-  <p style="font-size:500%;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Call Of Duty</p>
+  <p style="font-size:500%;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">ROCKET LEAGUE</p>
 </div>
 
 
@@ -107,14 +107,17 @@
 <div class="container" style="background-color: #1b0a39; border-radius: 5px;"> 
   <div class="containerjogo" style="margin-right: 10%;">
     <div class="image" style="display: flex;justify-content: center;">
-      <img src="imagens/jogos/callofdutycoldwar.png" width="80%" class="rounded-corners"style="margin-top: 5%;margin-bottom: 5%;max-width: 200px;"></img>
+        <img src="imagens/jogos/rocketleague.jpg" width="150px" class="rounded-corners"style="margin-top: 10%;margin-right: 10px;margin-left: 10px ;margin-bottom: 10%;max-width: 400px;"></img>
     </div>
     <div class="text" style="margin-top: 20px;margin-bottom: 20px;">
-    <p style="font-size:80%;margin-bottom: 5%;"><i>Call of Duty: Black Ops Cold War is a 2020 first-person shooter video game developed by Treyarch and Raven Software and published by Activision.</i></p>
+    <p style="font-size:80%;margin-bottom: 5%;"><i>Descrito como "futebol, mas com carros movidos a foguete", Rocket League tem de um a quatro jogadores designados para cada uma das duas equipes, usando veículos movidos a foguete para acertar o gol do adversário e marcar pontos ao longo de uma partida.</i></p>
       <div>
-      <button id="wishlist-button-callofdutycoldwar" onclick="addToWishlist('<?php echo $_SESSION['username']; ?>', 'callofdutycoldwar')" 
-      class="btn btn-outline-success me-2" type="button"><i class="far fa-heart"></i>
-       Add to Wishlist</button>
+      <?php if (isset($_SESSION['username'])): ?>
+    <button id="wishlist-button-rocketleague" onclick="addToWishlist('<?php echo $_SESSION['username']; ?>', 'rocketleague')" class="btn btn-outline-success me-2" type="button"><i class="far fa-heart"></i> Add to Wishlist</button>
+<?php else: ?>
+    <p>Please <a href="index2.php">log in</a> to add this game to your wishlist.</p> 
+    <!-- index2.php foi criado para ir para um login diferente que quando ele da sign in ele vai direto para a pagina do rocket league sem voltar pra homepage -->
+<?php endif; ?>
       </div>
     </div>
   </div>
@@ -127,34 +130,27 @@
  <h1 class="title margem20" style="margin-top: 50px;;">Available on</h1>
   <div class="video-card-container3">  
     <div class="video-card3">
-      <div class="video-card-price3">
-        <img src="imagens/plataforma/steam.png" class="video-card-image3" alt="">
-        <a href="https://store.steampowered.com/app/1985810/Call_of_Duty_Black_Ops_Cold_War/"><img src="imagens/plataforma/steam 2.png" mute loop class="card-video3"></img>
-        <span class="card__footer text">
-          <p style="font-size:80%;margin-top: 15px;">59.99€ </p>
-        </span></a>
-      </div>
-    </div>
-    <div class="video-card3">
-      <img src="imagens/plataforma/psn.png" class="video-card-image3" alt="">
-      <a href="https://store.playstation.com/pt-pt/product/EP0002-CUSA24267_00-CODCWSTANDARD001/"><img src="imagens/plataforma/psn 2.png" mute loop class="card-video3"></img>
-      <span class="card__footer text">
-        <p style="font-size:80%;margin-top: 15px;">69.99€ </p>
-      </span></a>
-    </div>
-    <div class="video-card3">
-      <img src="imagens/plataforma/epicgames.png" class="video-card-image3" alt="">
-      <a href="https://www.callofduty.com/pt/blackopscoldwar"><img src="imagens/plataforma/epicgames 2.png" mute loop class="card-video3"></img>
-      <span class="card__footer text">
-        <p style="font-size:80%;margin-top: 15px;">59.99€ </p>
-      </span></a>
-    </div>
-    <div class="video-card3">
-      <img src="imagens/plataforma/xbox.png" class="video-card-image3" alt="">
-      <a href="https://www.xbox.com/pt-PT/games/store/call-of-duty-black-ops-cold-war/9P7PFH4RMFZD"><img src="imagens/plataforma/xbox 2.jpg" mute loop class="card-video3"></img>  
-      <span class="card__footer text">
-        <p style="font-size:80%;margin-top: 15px;">23.09€ </p>
-      </span></a>
+        <div class="video-card-price3">
+            <img src="imagens/plataforma/psn.png" class="video-card-image3" alt="">
+            <a href="https://store.playstation.com/pt-pt/concept/203715"><img src="imagens/plataforma/psn 2.png" mute loop class="card-video3"></img>
+            <span class="card__footer text">
+              <p style="font-size:80%;margin-top: 15px;">9.99€ </p>
+            </span></a>
+          </div>
+        </div>
+        <div class="video-card3">
+          <img src="imagens/plataforma/epicgames.png" class="video-card-image3" alt="">
+          <a href="https://store.epicgames.com/pt-BR/p/rocket-league"><img src="imagens/plataforma/epicgames 2.png" mute loop class="card-video3"></img>
+          <span class="card__footer text">
+            <p style="font-size:80%;margin-top: 15px;">Free </p>
+          </span></a>
+        </div>
+        <div class="video-card3">
+          <img src="imagens/plataforma/xbox.png" class="video-card-image3" alt="">
+          <a href="https://www.xbox.com/pt-PT/games/store/rocket-league/C125W9BG2K0V"><img src="imagens/plataforma/xbox 2.jpg" mute loop class="card-video3"></img>  
+          <span class="card__footer text">
+            <p style="font-size:80%;margin-top: 15px;">8.20€ </p>
+          </span></a>
     </div>
   </div>
 </div>
@@ -181,39 +177,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
     xhr.onreadystatechange = function() {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-            var button = document.getElementById("wishlist-button-callofdutycoldwar");
+            var button = document.getElementById("wishlist-button-rocketleague");
             var response = JSON.parse(this.responseText);
             if (response.message === "Game is in the wishlist") {
                 button.innerHTML = '<i class="far fa-trash"></i> Remove from Wishlist';
                 button.className = 'btn btn-outline-danger me-2';
-                button.onclick = function() { removeFromWishlist('<?php echo $_SESSION['username']; ?>', 'callofdutycoldwar'); };
+                button.onclick = function() { removeFromWishlist('<?php echo $_SESSION['username']; ?>', 'rocketleague'); };
             } else {
                 button.innerHTML = '<i class="far fa-heart"></i> Add to Wishlist';
                 button.className = 'btn btn-outline-success me-2';
-                button.onclick = function() { addToWishlist('<?php echo $_SESSION['username']; ?>', 'callofdutycoldwar'); };
+                button.onclick = function() { addToWishlist('<?php echo $_SESSION['username']; ?>', 'rocketleague'); };
             }
         }
     }
     
-    xhr.send("username=" + encodeURIComponent('<?php echo $_SESSION['username']; ?>') + "&game=callofdutycoldwar");
+    xhr.send("username=" + encodeURIComponent('<?php echo $_SESSION['username']; ?>') + "&game=rocketleague");
 });
 
 function addToWishlist(username, game) {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "add_to_wishlist.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    var button = document.getElementById("wishlist-button-callofdutycoldwar");
+    var button = document.getElementById("wishlist-button-rocketleague");
     
     xhr.onreadystatechange = function() {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
             var response = JSON.parse(this.responseText);
             if (response.status === 'success') {
-                // alert("Game added to your wishlist!");
+                alert("Game added to your wishlist!");
                 button.innerHTML = '<i class="far fa-trash"></i> Remove from Wishlist';
                 button.className = 'btn btn-outline-danger me-2';
                 button.onclick = function() { removeFromWishlist(username, game); };
             } else if (response.status === 'error') {
-                // alert(response.message);
+                alert(response.message);
             }
         }
     }
@@ -225,18 +221,18 @@ function removeFromWishlist(username, game) {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "remove_from_wishlist.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    var button = document.getElementById("wishlist-button-callofdutycoldwar");
+    var button = document.getElementById("wishlist-button-rocketleague");
     
     xhr.onreadystatechange = function() {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
             var response = JSON.parse(this.responseText);
             if (response.status === 'success') {
-                // alert("Game removed from your wishlist!");
+                alert("Game removed from your wishlist!");
                 button.innerHTML = '<i class="far fa-heart"></i> Add to Wishlist';
                 button.className = 'btn btn-outline-success me-2';
                 button.onclick = function() { addToWishlist(username, game); };
             } else if (response.status === 'error') {
-                // alert(response.message);
+                alert(response.message);
             }
         }
     }
