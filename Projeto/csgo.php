@@ -87,6 +87,11 @@
              <a class="nav-link margemleft" href="wishlist.php">Wishlist</a>
            </li>
          </ul>
+         <div class="search-box" style="margin-right: 20px;margin-left: 20px;">
+            <input type="text"  id="search" class="input-search" placeholder="Search your game..." autocomplete="off">
+            <div class="search-suggestions"></div>
+            </div>
+            </ul>
          <?php
             include 'login_info.php'; 
             ?>
@@ -226,6 +231,8 @@ function removeFromWishlist(username, game) {
     xhr.send("username=" + encodeURIComponent(username) + "&game=" + encodeURIComponent(game));
 }
 </script>
+<script src="games.js"></script>
+<script src="index.js"></script>
 
 </body>
 </html>

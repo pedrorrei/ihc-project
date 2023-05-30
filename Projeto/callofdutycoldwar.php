@@ -87,6 +87,11 @@
              <a class="nav-link margemleft" href="wishlist.php">Wishlist</a>
            </li>
          </ul>
+         <div class="search-box" style="margin-right: 20px;margin-left: 20px;">
+            <input type="text"  id="search" class="input-search" placeholder="Search your game..." autocomplete="off">
+            <div class="search-suggestions"></div>
+            </div>
+            </ul>
          <?php
             include 'login_info.php'; 
             ?>
@@ -107,14 +112,17 @@
 <div class="container" style="background-color: #1b0a39; border-radius: 5px;"> 
   <div class="containerjogo" style="margin-right: 10%;">
     <div class="image" style="display: flex;justify-content: center;">
-      <img src="imagens/jogos/callofdutycoldwar.png" width="80%" class="rounded-corners"style="margin-top: 5%;margin-bottom: 5%;max-width: 200px;"></img>
+      <img src="imagens/jogos/callofdutycoldwar.png" width="80%" class="rounded-corners"style="margin-top: 10%;margin-bottom: 10%;max-width: 300px;"></img>
     </div>
     <div class="text" style="margin-top: 20px;margin-bottom: 20px;">
     <p style="font-size:80%;margin-bottom: 5%;"><i>Call of Duty: Black Ops Cold War is a 2020 first-person shooter video game developed by Treyarch and Raven Software and published by Activision.</i></p>
       <div>
-      <button id="wishlist-button-callofdutycoldwar" onclick="addToWishlist('<?php echo $_SESSION['username']; ?>', 'callofdutycoldwar')" 
-      class="btn btn-outline-success me-2" type="button"><i class="far fa-heart"></i>
-       Add to Wishlist</button>
+      <?php if (isset($_SESSION['username'])): ?>
+    <button id="wishlist-button-callofdutycoldwar" onclick="addToWishlist('<?php echo $_SESSION['username']; ?>', 'callofdutycoldwar')" class="btn btn-outline-success me-2" type="button"><i class="far fa-heart"></i> Add to Wishlist</button>
+<?php else: ?>
+    <p>Please <a href="index2.php">log in</a> to add this game to your wishlist.</p> 
+    <!-- index2.php foi criado para ir para um login diferente que quando ele da sign in ele vai direto para a pagina do cs:go sem voltar pra homepage -->
+<?php endif; ?>
       </div>
     </div>
   </div>
@@ -129,32 +137,11 @@
     <div class="video-card3">
       <div class="video-card-price3">
         <img src="imagens/plataforma/steam.png" class="video-card-image3" alt="">
-        <a href="https://store.steampowered.com/app/1985810/Call_of_Duty_Black_Ops_Cold_War/"><img src="imagens/plataforma/steam 2.png" mute loop class="card-video3"></img>
+        <a href="https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/"><img src="imagens/plataforma/steam 2.png" mute loop class="card-video3"></img>
         <span class="card__footer text">
-          <p style="font-size:80%;margin-top: 15px;">59.99€ </p>
+          <p style="font-size:80%;margin-top: 15px;">Free</p>
         </span></a>
       </div>
-    </div>
-    <div class="video-card3">
-      <img src="imagens/plataforma/psn.png" class="video-card-image3" alt="">
-      <a href="https://store.playstation.com/pt-pt/product/EP0002-CUSA24267_00-CODCWSTANDARD001/"><img src="imagens/plataforma/psn 2.png" mute loop class="card-video3"></img>
-      <span class="card__footer text">
-        <p style="font-size:80%;margin-top: 15px;">69.99€ </p>
-      </span></a>
-    </div>
-    <div class="video-card3">
-      <img src="imagens/plataforma/epicgames.png" class="video-card-image3" alt="">
-      <a href="https://www.callofduty.com/pt/blackopscoldwar"><img src="imagens/plataforma/epicgames 2.png" mute loop class="card-video3"></img>
-      <span class="card__footer text">
-        <p style="font-size:80%;margin-top: 15px;">59.99€ </p>
-      </span></a>
-    </div>
-    <div class="video-card3">
-      <img src="imagens/plataforma/xbox.png" class="video-card-image3" alt="">
-      <a href="https://www.xbox.com/pt-PT/games/store/call-of-duty-black-ops-cold-war/9P7PFH4RMFZD"><img src="imagens/plataforma/xbox 2.jpg" mute loop class="card-video3"></img>  
-      <span class="card__footer text">
-        <p style="font-size:80%;margin-top: 15px;">23.09€ </p>
-      </span></a>
     </div>
   </div>
 </div>
@@ -209,7 +196,7 @@ function addToWishlist(username, game) {
             var response = JSON.parse(this.responseText);
             if (response.status === 'success') {
                 // alert("Game added to your wishlist!");
-                button.innerHTML = '<i class="far fa-trash"></i> Remove from Wishlist';
+                button.innerHTML = '<i class="fa-regular fa-trash-can "></i> Remove from Wishlist';
                 button.className = 'btn btn-outline-danger me-2';
                 button.onclick = function() { removeFromWishlist(username, game); };
             } else if (response.status === 'error') {
@@ -244,5 +231,8 @@ function removeFromWishlist(username, game) {
     xhr.send("username=" + encodeURIComponent(username) + "&game=" + encodeURIComponent(game));
 }
 </script>
+<script src="games.js"></script>
+<script src="index.js"></script>
+
 </body>
 </html>
