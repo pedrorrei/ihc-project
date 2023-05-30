@@ -1,1 +1,0 @@
-php -S localhost:8000 -t /home/pedrorrei/Desktop/faculdade/2ANO/2semestre/ihc/projecto/ihc-project
