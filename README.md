@@ -20,7 +20,7 @@ Run 'php -S 127.0.0.1:8000 -t @yourpath' no diretorio 'Projeto'
 
 Abrir 'http://127.0.0.1:8000/welcome.php'
 
-(Recomenda-se usar o navegador Mozilla FireFox para melhor estabilidade)
+(Se tiver com problemas de estabilidade ou de carregar imagens experimente outro navegador)
 
 
 
